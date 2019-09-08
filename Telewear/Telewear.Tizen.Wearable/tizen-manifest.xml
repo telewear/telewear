@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.nudev.telewear" version="1.0.0" api-version="4" xmlns="http://tizen.org/ns/packages">
+    <profile name="wearable" />
+    <ui-application appid="com.nudev.telewear" exec="Telewear.Tizen.Wearable.dll" multiple="false" nodisplay="false" taskmanage="true" type="dotnet" launch_mode="single">
+        <label>Telewear</label>
+        <icon>Telewear.Tizen.Wearable.png</icon>
+        <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+        <splash-screens />
+    </ui-application>
+    <shortcut-list />
+    <provides-appdefined-privileges />
+</manifest>
