@@ -15,6 +15,10 @@ namespace Telewear {
                     Root = new TableRoot("Telewear") {
                         new TableSection ("Telewear") {
                             new TextCell {
+                                Text = "Telewear",
+                                Detail = "The scroll of truth!"
+                            },
+                            new TextCell {
                                 Text = "John Smith",
                                 Detail = "Did you bring the apples?"
                             },
