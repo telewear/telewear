@@ -24,6 +24,10 @@ namespace Telewear {
                                 Detail = ""
                             },
                             new TextCell {
+                                Text = "Archived Chats",
+                                Detail = "Spider Fans, Tizenreport"
+                            },
+                            new TextCell {
                                 Text = "John Smith",
                                 Detail = "Did you bring the apples?"
                             },
