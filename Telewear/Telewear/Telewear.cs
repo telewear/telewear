@@ -14,9 +14,14 @@ namespace Telewear {
                     Intent = TableIntent.Form,
                     Root = new TableRoot("Telewear") {
                         new TableSection ("Telewear") {
+                            // buf
                             new TextCell {
                                 Text = "Telewear",
                                 Detail = "The scroll of truth!"
+                            },
+                            new TextCell {
+                                Text = "Saved Messages",
+                                Detail = ""
                             },
                             new TextCell {
                                 Text = "John Smith",
@@ -38,6 +43,7 @@ namespace Telewear {
                                 Text = "Telewear",
                                 Detail = "No messages here..."
                             },
+                            // another buf
                             new TextCell {
                                 Text = "",
                                 Detail = "NYEHHH"
