@@ -21,7 +21,7 @@ namespace Telewear {
                             },
                             new TextCell {
                                 Text = "Saved Messages",
-                                Detail = ""
+                                Detail = "No messages here..."
                             },
                             new TextCell {
                                 Text = "Archived Chats",
