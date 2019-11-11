@@ -69,5 +69,9 @@ namespace Telewear {
         protected override void OnResume() {
             // Handle when your app resumes
         }
+
+        private void UpdateList() {
+
+        }
     }
 }
