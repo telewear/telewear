@@ -4,7 +4,7 @@
     <profile name="wearable" />
     <ui-application appid="io.telewear.telewear" exec="Telewear.Tizen.Wearable.dll" multiple="false" nodisplay="false" taskmanage="true" type="dotnet" launch_mode="single">
         <label>Telewear</label>
-        <icon>telewearlogo_UR2398547.png</icon>
+        <icon>telewearlogo.png</icon>
         <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
         <splash-screens />
     </ui-application>
