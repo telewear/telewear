@@ -14,6 +14,4 @@ This project uses Visual Studio 2019 with the Xamarin workload.
 ### Please note:
 You need to replace the API keys with [your own keys](https://core.telegram.org/api/obtaining_api_id).
 
-You must provide the source code of your app as per the GPL.
-
-And, you can't use the Telewear name or icon, nor can you imply affiliation with Telewear.
+If you fork Telewear you must provide the source code of your forked app as per the GPL.
