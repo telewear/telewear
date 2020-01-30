@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Telewear {
     public class App : Application {
         public App() {
+            var messages = new Command(() => App.Current.MainPage = new Messages());
             // The root page of your application
             MainPage = new ContentPage {
                 Content = new TableView {
@@ -21,27 +22,33 @@ namespace Telewear {
                             },
                             new TextCell {
                                 Text = "Saved Messages",
-                                Detail = "No messages here..."
+                                Detail = "No messages here...",
+                                Command = messages
                             },
                             new TextCell {
                                 Text = "Archived Chats",
-                                Detail = "Spider Fans, Tizenreport"
+                                Detail = "Spider Fans, Tizenreport",
+                                Command = messages
                             },
                             new TextCell {
                                 Text = "John Smith",
-                                Detail = "Did you bring the apples?"
+                                Detail = "Did you bring the apples?",
+                                Command = messages
                             },
                             new TextCell {
                                 Text = "Jane Smith",
-                                Detail = "Happy birthday!"
+                                Detail = "Happy birthday!",
+                                Command = messages
                             },
                             new TextCell {
                                 Text = "Dead Memes",
-                                Detail = "Senator: What's 9+10?"
+                                Detail = "Senator: What's 9+10?",
+                                Command = messages
                             },
                             new TextCell {
                                 Text = "Minecrafters",
-                                Detail = "Kyle: aw man"
+                                Detail = "Kyle: aw man",
+                                Command = messages
                             },
                             new TextCell {
                                 Text = "Telewear",
