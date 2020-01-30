@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 namespace Telewear {
     public class App : Application {
+        public Page root;
         public App() {
             var messages = new Command(() => App.Current.MainPage = new Messages());
             // The root page of your application
@@ -63,6 +64,7 @@ namespace Telewear {
                     }
                 }
             };
+            Comms.root = MainPage;
         }
 
         protected override void OnStart() {

@@ -46,5 +46,9 @@ namespace Telewear {
                 }
             };
         }
+        protected override bool OnBackButtonPressed() {
+            App.Current.MainPage = Comms.root;
+            return true;
+        }
     }
 }
