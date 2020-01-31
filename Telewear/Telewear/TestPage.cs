@@ -10,7 +10,7 @@ namespace Telewear {
         public TestPage() {
             var messages = new Command(() => App.Current.MainPage = new Messages("Telewear Community"));
             var chatlist = new Command(() => App.Current.MainPage = Comms.root);
-            var onboarding1 = new Command(() => App.Current.MainPage = new FirstSetupBullet1());
+            //var onboarding1 = new Command(() => App.Current.MainPage = new FirstSetupBullet1());
             Content = new TableView {
                 Intent = TableIntent.Form,
                 Root = new TableRoot("Test Page") {
@@ -42,11 +42,11 @@ namespace Telewear {
                             Detail = "Tap here to launch chat list page",
                             Command = chatlist
                         },
-                        new TextCell {
+                        /*new TextCell {
                             Text = "Launch Onboarding 1",
                             Detail = "Tap here to launch first launch page 1",
                             Command = onboarding1
-                        },
+                        },*/
                         // another buffer
                         new TextCell {
                             Text = "",
