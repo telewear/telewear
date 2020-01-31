@@ -9,7 +9,7 @@ namespace Telewear {
     public class App : Application {
         public Page root;
         public App() {
-            
+            var testpage = new Command(() => App.Current.MainPage = new TestPage());
             var messages = new Command(() => App.Current.MainPage = new Messages("Telewear Community"));
             // The root page of your application
             MainPage = new ContentPage {
@@ -17,7 +17,7 @@ namespace Telewear {
                     Intent = TableIntent.Form,
                     Root = new TableRoot("Telewear") {
                         new TableSection ("Telewear") {
-                            // buf
+                            // buffer
                             new TextCell {
                                 Text = "Telewear",
                                 Detail = "The scroll of truth!"
@@ -54,9 +54,15 @@ namespace Telewear {
                             },
                             new TextCell {
                                 Text = "Telewear",
-                                Detail = "No messages here..."
+                                Detail = "No messages here...",
+                                Command = messages
                             },
-                            // another buf
+                            new TextCell {
+                                Text = "",
+                                Detail = "Tap to open test page",
+                                Command = testpage
+                            },
+                            // another buffer
                             new TextCell {
                                 Text = "",
                                 Detail = "NYEHHH"

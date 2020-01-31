@@ -13,7 +13,7 @@ namespace Telewear {
                 Intent = TableIntent.Form,
                 Root = new TableRoot(grpName) {
                     new TableSection (grpName) {
-                        // buf
+                        // buffer
                         new TextCell {
                             Text = grpName,
                             Detail = " "
@@ -42,6 +42,7 @@ namespace Telewear {
                             Text = "Have you tried to implement TDLib or is it ui only atm?",
                             Detail = "Filippo Fedelli"
                         },
+                        // buffer
                         new TextCell {
                             Text = "",
                             Detail = ""
