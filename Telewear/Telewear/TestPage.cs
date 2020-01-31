@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Telewear {
@@ -11,6 +11,11 @@ namespace Telewear {
             var messages = new Command(() => App.Current.MainPage = new Messages("Telewear Community"));
             var chatlist = new Command(() => App.Current.MainPage = Comms.root);
             //var onboarding1 = new Command(() => App.Current.MainPage = new FirstSetupBullet1());
+            /*
+                    new Label { Text = DeviceInfo.Model },
+                    new Label { Text = DeviceInfo.VersionString},
+                    new Label { Text = DeviceInfo.Idiom.ToString() }
+            */
             Content = new TableView {
                 Intent = TableIntent.Form,
                 Root = new TableRoot("Test Page") {
@@ -31,6 +36,10 @@ namespace Telewear {
                         new TextCell {
                             Text = "LibTGVoip version",
                             Detail = "none"
+                        },
+                        new TextCell {
+                            Text = "Device",
+                            Detail = DeviceInfo.Model + " " + DeviceInfo.Idiom.ToString().ToLower() + ", " + DeviceInfo.VersionString
                         },
                         new TextCell {
                             Text = "Launch Messages Page",
@@ -55,6 +64,10 @@ namespace Telewear {
                     }
                 }
             };
+        }
+        protected override bool OnBackButtonPressed() {
+            App.Current.MainPage = Comms.root;
+            return true;
         }
     }
 }
