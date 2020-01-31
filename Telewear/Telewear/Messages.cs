@@ -7,15 +7,15 @@ using Xamarin.Forms;
 
 namespace Telewear {
     public class Messages : ContentPage {
-        public Messages() {
+        public Messages(string grpName) {
             // The root page of your application
             Content = new TableView {
                 Intent = TableIntent.Form,
-                Root = new TableRoot("Telewear Community") {
-                    new TableSection ("Telewear Community") {
+                Root = new TableRoot(grpName) {
+                    new TableSection (grpName) {
                         // buf
                         new TextCell {
-                            Text = " ",
+                            Text = grpName,
                             Detail = " "
                         },
                         new TextCell {
@@ -41,6 +41,10 @@ namespace Telewear {
                         new TextCell {
                             Text = "Have you tried to implement TDLib or is it ui only atm?",
                             Detail = "Filippo Fedelli"
+                        },
+                        new TextCell {
+                            Text = "",
+                            Detail = ""
                         }
                     }
                 }

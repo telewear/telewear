@@ -9,7 +9,8 @@ namespace Telewear {
     public class App : Application {
         public Page root;
         public App() {
-            var messages = new Command(() => App.Current.MainPage = new Messages());
+            
+            var messages = new Command(() => App.Current.MainPage = new Messages("Telewear Community"));
             // The root page of your application
             MainPage = new ContentPage {
                 Content = new TableView {
