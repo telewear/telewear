@@ -54,9 +54,10 @@ namespace Telewear {
         }
 
         private void TestPageEasterEgg() {
-            if (easterctr == 5)
+            if (easterctr == 4) {
                 App.Current.MainPage = new TestPage();
-            else
+                easterctr = 0;
+            } else
                 easterctr++;
         }
     }
