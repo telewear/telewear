@@ -1,4 +1,5 @@
 using System;
+using Xamarin.Forms;
 
 namespace Telewear {
     class Program : global::Xamarin.Forms.Platform.Tizen.FormsApplication {
@@ -10,7 +11,7 @@ namespace Telewear {
 
         static void Main(string[] args) {
             var app = new Program();
-            global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
+            Forms.Init(app);
             app.Run(args);
         }
     }

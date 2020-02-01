@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
 
 namespace Telewear {
-    public class OnbEnterPhone : ContentPage {
+    public class OnbEnterPhone : CirclePage {
         public OnbEnterPhone(bool newUser) {
             Entry phone = new Entry {
                 Margin = new Thickness(20, 70, 20, 10),
@@ -15,7 +15,7 @@ namespace Telewear {
             };
             var onbAuth = new Command(() => App.Current.MainPage = new OnbTypeAuthCode(phone.Text, newUser));
             var action = newUser ? "sign you up" : "log you in";
-            Content = new StackLayout {
+            Content = new CircleStackLayout {
                 Children = {
                     phone,
                     new Label {
