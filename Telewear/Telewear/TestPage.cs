@@ -13,7 +13,7 @@ namespace Telewear {
             var chatlist = new Command(() => App.Current.MainPage = Comms.root);
             var nuToggle = new Command(() => nu = !nu);
             var onbPhone = new Command(() => App.Current.MainPage = new OnbEnterPhone(nu));
-            var onbAuth = new Command(() => App.Current.MainPage = new OnbTypeAuthCode(nu));
+            var onbAuth = new Command(() => App.Current.MainPage = new OnbTypeAuthCode("+1 205 555-1234", nu));
             var onbNs = new Command(() => App.Current.MainPage = new OnbNameSurname());
             //var onboarding1 = new Command(() => App.Current.MainPage = new FirstSetupBullet1());
             /*
