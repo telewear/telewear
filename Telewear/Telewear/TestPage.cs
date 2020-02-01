@@ -35,7 +35,7 @@ namespace Telewear {
                             Detail = "0.0.1"
                         },
                         new TextCell {
-                            Text = "TDlib version",
+                            Text = "TDLib version",
                             Detail = "none"
                         },
                         new TextCell {
