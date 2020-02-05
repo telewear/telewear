@@ -15,6 +15,7 @@ namespace Telewear {
             var onbPhone = new Command(() => App.Current.MainPage = new OnbEnterPhone(nu));
             var onbAuth = new Command(() => App.Current.MainPage = new OnbTypeAuthCode("+1 205 555-1234", nu));
             var onbNs = new Command(() => App.Current.MainPage = new OnbNameSurname());
+            var onbBio = new Command(() => App.Current.MainPage = new OnbWriteBio());
             var settings = new Command(() => App.Current.MainPage = new Settings());
             //var onboarding1 = new Command(() => App.Current.MainPage = new FirstSetupBullet1());
             /*
@@ -76,6 +77,11 @@ namespace Telewear {
                             Text = "Launch Type Auth Code Page",
                             Detail = "Tap here to launch auth code page",
                             Command = onbAuth
+                        },
+                        new TextCell {
+                            Text = "Launch Type Bio Page",
+                            Detail = "Tap here to launch bio page",
+                            Command = onbBio
                         },
                         new TextCell {
                             Text = "Settings",
