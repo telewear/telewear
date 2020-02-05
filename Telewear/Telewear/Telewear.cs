@@ -10,8 +10,7 @@ namespace Telewear {
         public Page root;
         public App() {
             // These are for something to fill the app with without a TDLib
-            string[] sampleDataNames = { "Saved Messages", "Archived Chats", "John Smith", "Jane Smith", "Dead Memes", "Minecrafters", "Telewear Announcements", "501st Legion" };
-            string[] sampleDataMessages = { "No messages here...", "Spider Fans, Tizenreport", "Did you bring the apples?", "Happy birthday!", "Senator: What's 9+10?", "Kyle: aw man", "No messages here...", "Kenobi: hello there" };
+            
             // Create a TableView
             var tv = new TableView {
                 Intent = TableIntent.Form,
@@ -27,12 +26,12 @@ namespace Telewear {
                 }
             });
             // Iterate through the sample data and add every item as a TableSection
-            for (int i = 0; i < sampleDataNames.Length; i++) {
-                var name = sampleDataNames[i];
+            for (int i = 0; i < TestItems.overMessages.Length; i++) {
+                var name = TestItems.overNames[i];
                 tv.Root.Add(new TableSection() {
                     new TextCell {
-                        Text = sampleDataNames[i],
-                        Detail = sampleDataMessages[i],
+                        Text = TestItems.overNames[i],
+                        Detail = TestItems.overMessages[i],
                         Command = new Command(() => App.Current.MainPage = new Messages(name))
                     }
                 });
