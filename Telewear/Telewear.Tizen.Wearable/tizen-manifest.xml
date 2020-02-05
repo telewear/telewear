@@ -16,10 +16,14 @@
         <privilege>http://tizen.org/privilege/recorder</privilege>
         <privilege>http://tizen.org/privilege/account.write</privilege>
         <privilege>http://tizen.org/privilege/location</privilege>
+        <privilege>http://tizen.org/privilege/account.read</privilege>
     </privileges>
     <provides-appdefined-privileges />
     <feature name="http://tizen.org/feature/screen.size.normal.360.360">true</feature>
     <feature name="http://tizen.org/feature/network.wifi">true</feature>
     <feature name="http://tizen.org/feature/microphone">true</feature>
-    <feature name="http://tizen.org/feature/speech.recognition">true</feature>
+    <feature name="http://tizen.org/feature/account">true</feature>
+    <feature name="http://tizen.org/feature/location">true</feature>
+    <feature name="http://tizen.org/feature/download">true</feature>
+    <feature name="http://tizen.org/feature/watch_app">true</feature>
 </manifest>

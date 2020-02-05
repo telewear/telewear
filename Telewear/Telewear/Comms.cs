@@ -6,5 +6,6 @@ using Xamarin.Forms;
 namespace Telewear {
     public static class Comms {
         public static Page root;
+        public static User user = new User();
     }
 }

@@ -13,7 +13,7 @@ namespace Telewear {
                 Placeholder = "Phone Number",
                 Keyboard = Keyboard.Numeric
             };
-            var onbAuth = new Command(() => App.Current.MainPage = new OnbTypeAuthCode(phone.Text, newUser));
+            var onbAuth = new Command(() => Next(phone.Text, newUser)) ;
             var action = newUser ? "sign you up" : "log you in";
             Content = new CircleStackLayout {
                 Children = {
@@ -29,6 +29,10 @@ namespace Telewear {
                     }
                 }
             };
+        }
+        void Next(string phone, bool newUser) {
+            Comms.user.phone = phone;
+            App.Current.MainPage = new OnbTypeAuthCode(phone, newUser);
         }
     }
 }
