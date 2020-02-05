@@ -9,7 +9,11 @@ namespace Telewear {
         public string surname;
         public string bio;
         public string pic;
-        
-
+        public string fullName {
+            get { return name + " " + surname; }
+        }
+        public override string ToString() {
+            return fullName + " (" + phone + ")";
+        }
     }
 }

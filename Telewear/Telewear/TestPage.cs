@@ -17,6 +17,7 @@ namespace Telewear {
             var onbNs = new Command(() => App.Current.MainPage = new OnbNameSurname());
             var onbBio = new Command(() => App.Current.MainPage = new OnbWriteBio());
             var settings = new Command(() => App.Current.MainPage = new Settings());
+            var profile = new Command(() => App.Current.MainPage = new Profile(TestItems.TestUser_ObiWan));
             //var onboarding1 = new Command(() => App.Current.MainPage = new FirstSetupBullet1());
             /*
                     new Label { Text = DeviceInfo.Model },
@@ -87,6 +88,11 @@ namespace Telewear {
                             Text = "Settings",
                             Detail = "Tap here to launch settings page",
                             Command = settings
+                        },
+                        new TextCell {
+                            Text = "Profile",
+                            Detail = "Tap here to launch profile page",
+                            Command = profile
                         },
                         // another buffer
                         new TextCell {
