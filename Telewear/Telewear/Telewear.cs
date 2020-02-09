@@ -11,7 +11,7 @@ namespace Telewear {
     public class App : Application {
         public Page root;
         public App() {
-            Comms.client = Td.Client.Create(new UpdatesHandler());
+            Comms.client = Comms.GetClient();
             if (true) {
                 MainPage = new OnbEnterPhone(false);
             } else {

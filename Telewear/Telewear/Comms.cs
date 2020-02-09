@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Td = Telegram.Td;
@@ -11,7 +12,16 @@ namespace Telewear {
         public static Page root;
         public static User user = new User();
         public static Td.Client client;
-        public static void OnAuthorizationStateUpdated(TdApi.AuthorizationState authorizationState) {
+        public static Td.Client GetClient() {
+                Td.Client result = Td.Client.Create(new UpdatesHandler());
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
+                    result.Run();
+                }).Start();
+                return result;
+            }
+            public static void OnAuthorizationStateUpdated(TdApi.AuthorizationState authorizationState) {
             //DeviceInfo.Model + " " + .ToLower() + ", " + 
             if (authorizationState is TdApi.AuthorizationStateWaitTdlibParameters) {
                 TdApi.TdlibParameters parameters = new TdApi.TdlibParameters();
