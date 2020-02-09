@@ -37,7 +37,7 @@ namespace Telewear {
         void Next(Entry n, Entry s) {
             Comms.user.name = n.Text;
             Comms.user.surname = s.Text;
-            var account = Account.CreateAccount();
+            Account account = Account.CreateAccount();
             string userName = "Marcus";
             string displayName = "Marcus_display";
             string domainName = "Marcus_domain";

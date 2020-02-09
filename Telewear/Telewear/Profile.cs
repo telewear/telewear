@@ -31,16 +31,26 @@ namespace Telewear {
         public Profile(User user) {
             Content = new ScrollView() {
                 Content = new StackLayout() {
+                    Margin = new Thickness(20,20,20,20),
                     Children = {
-                        new Image {
-                            Source = ImageSource.FromUri(new Uri("https://pbs.twimg.com/profile_images/634355445579284481/V3BMUJ9v_400x400.jpg"))
+                        new StackLayout
+                        {
+                            Spacing = 0,
+                            Orientation = StackOrientation.Horizontal,
+                            Children =
+                            {
+                                new Image {
+                                    Source = ImageSource.FromUri(new Uri("https://pbs.twimg.com/profile_images/634355445579284481/V3BMUJ9v.jpg"))
+                                },
+                                new Label {
+                                    Text = user.fullName,
+                                    FontSize = 15,
+                                    FontAttributes = FontAttributes.Bold,
+                                    HorizontalTextAlignment = TextAlignment.Center
+                                },
+                            }
                         },
-                        new Label {
-                            Text = user.fullName,
-                            FontSize = 15,
-                            FontAttributes = FontAttributes.Bold,
-                            HorizontalTextAlignment = TextAlignment.Center
-                        },
+                        
                         new Label {
                             Text = user.bio,
                             FontSize = 7,
