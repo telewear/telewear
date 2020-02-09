@@ -5,6 +5,8 @@ using System.Text;
 
 using Xamarin.Forms;
 using Tizen.Account.AccountManager;
+using Td = Telegram.Td;
+using TdApi = Telegram.Td.Api;
 
 namespace Telewear {
     public class OnbNameSurname : ContentPage {
@@ -50,6 +52,7 @@ namespace Telewear {
             account.EmailId = emailId;
             account.IconPath = iconPath;
             AccountService.AddAccount(account);
+            Comms.client.Send(new TdApi.RegisterUser(n.Text, s.Text), new AuthorizationRequestHandler());
             App.Current.MainPage = Comms.root;
         }
     }

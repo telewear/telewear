@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
-using Telegram.Td;
+using Td = Telegram.Td;
+using TdApi = Telegram.Td.Api;
 
 namespace Telewear {
 
@@ -34,6 +35,7 @@ namespace Telewear {
         }
         void Next(string phone, bool newUser) {
             Comms.user.phone = phone;
+            Comms.client.Send(new TdApi.SetAuthenticationPhoneNumber(phone, null), new AuthorizationRequestHandler());
             App.Current.MainPage = new OnbTypeAuthCode(phone, newUser);
         }
     }

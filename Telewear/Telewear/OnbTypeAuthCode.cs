@@ -8,6 +8,7 @@ using Xamarin.Forms;
 namespace Telewear {
     public class OnbTypeAuthCode : ContentPage {
         public OnbTypeAuthCode(string number, bool newUser) {
+            //Comms.client.Send(new TdApi.CheckAuthenticationCode(code), new AuthorizationRequestHandler());
             var onbAuth = new Command(() => App.Current.MainPage = newUser ? Comms.root : new OnbNameSurname());
             Content = new StackLayout {
                 Children = {
