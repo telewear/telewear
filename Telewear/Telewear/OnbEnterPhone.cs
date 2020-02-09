@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using Tizen.Wearable.CircularUI.Forms;
 using Xamarin.Forms;
+using Telegram.Td;
 
 namespace Telewear {
+
     public class OnbEnterPhone : CirclePage {
         public OnbEnterPhone(bool newUser) {
             Entry phone = new Entry {

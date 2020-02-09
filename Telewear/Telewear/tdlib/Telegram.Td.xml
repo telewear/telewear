@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "tddotnet"
+    </assembly>
+    <members>
+        <member name="M:Telegram.Td.Log.SetMaxFileSize(System.Int64)">
+            <summary>
+Changes the maximum size of TDLib log file.
+</summary>
+            <param name="maxFileSize">The maximum size of the file to where the internal TDLib log is written
+before the file will be auto-rotated. Must be positive. Defaults to 10 MB.</param>
+        </member>
+        <member name="M:Telegram.Td.Log.SetFilePath(System.String)">
+            <summary>
+Sets file path for writing TDLib internal log. By default TDLib writes logs to the System.err.
+Use this method to write the log to a file instead.
+</summary>
+            <param name="filePath">Path to a file for writing TDLib internal log. Use an empty path to switch back to logging
+to the System.err.</param>
+            <returns>Returns whether opening the log file succeeded.</returns>
+        </member>
+        <member name="M:Telegram.Td.Log.SetVerbosityLevel(System.Int32)">
+            <summary>
+Changes TDLib log verbosity.
+</summary>
+            <param name="verbosityLevel">New value of log verbosity level. Must be non-negative.
+Value 0 means FATAL, value 1 means ERROR, value 2 means WARNING, value 3 means INFO, value 4 means DEBUG,
+value greater than 4 can be used to enable even more logging.
+Default value of the log verbosity level is 5.</param>
+        </member>
+        <member name="T:Telegram.Td.Log">
+            <summary>
+Class for managing internal TDLib logging.
+</summary>
+        </member>
+        <member name="M:Telegram.Td.Client.Create(Telegram.Td.ClientResultHandler)">
+            <summary>
+Creates new Client.
+</summary>
+            <param name="updatesHandler">Handler for incoming updates.</param>
+            <returns>Returns created Client.</returns>
+        </member>
+        <member name="M:Telegram.Td.Client.Run">
+            <summary>
+Launches a cycle which will fetch all results of queries to TDLib and incoming updates from TDLib.
+Must be called once on a separate dedicated thread, on which all updates and query results will be handled.
+Returns only when TDLib instance is closed.
+</summary>
+        </member>
+        <member name="M:Telegram.Td.Client.SetUpdatesHandler(Telegram.Td.ClientResultHandler)">
+            <summary>
+Replaces handler for incoming updates from the TDLib.
+</summary>
+            <param name="updatesHandler">Handler with OnResult method which will be called for every incoming update from the TDLib.</param>
+        </member>
+        <member name="M:Telegram.Td.Client.Execute(Telegram.Td.Api.Function)">
+            <summary>
+Synchronously executes a TDLib request. Only a few marked accordingly requests can be executed synchronously.
+</summary>
+            <param name="function">Object representing a query to the TDLib.</param>
+            <returns>Returns request result.</returns>
+            <exception cref="T:System.NullReferenceException">Thrown when query is null.</exception>
+        </member>
+        <member name="M:Telegram.Td.Client.Send(Telegram.Td.Api.Function,Telegram.Td.ClientResultHandler)">
+            <summary>
+Sends a request to the TDLib.
+</summary>
+            <param name="function">Object representing a query to the TDLib.</param>
+            <param name="handler">Result handler with OnResult method which will be called with result
+of the query or with Telegram.Td.Api.Error as parameter. If it is null, nothing will be called.</param>
+            <exception cref="T:System.NullReferenceException">Thrown when query is null.</exception>
+        </member>
+        <member name="T:Telegram.Td.Client">
+            <summary>
+Main class for interaction with the TDLib.
+</summary>
+        </member>
+        <member name="M:Telegram.Td.ClientResultHandler.OnResult(Telegram.Td.Api.BaseObject)">
+            <summary>
+Callback called on result of query to TDLib or incoming update from TDLib.
+</summary>
+            <param name="object">Result of query or update of type Telegram.Td.Api.Update about new events.</param>
+        </member>
+        <member name="T:Telegram.Td.ClientResultHandler">
+            <summary>
+Interface for handler for results of queries to TDLib and incoming updates from TDLib.
+</summary>
+        </member>
+    </members>
+</doc>
