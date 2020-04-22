@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest package="io.telewear.wearogram" version="1.0.0" api-version="4" xmlns="http://tizen.org/ns/packages">
+    <author href="https://www.telewear.io">githubcatw and MarcAnt01</author>
+    <description>A simple Telegram client written in C#.</description>
+    <profile name="wearable" />
+    <ui-application appid="io.telewear.wearogram" exec="TelewearNew.Tizen.Wearable.dll" multiple="false" nodisplay="false" taskmanage="true" type="dotnet" launch_mode="single">
+        <label>Telewear</label>
+        <icon>TelewearNew.Tizen.Wearable.png</icon>
+        <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+        <splash-screens />
+    </ui-application>
+    <shortcut-list />
+    <account>
+        <account-provider appid="io.telewear.wearogram" multiple-accounts-support="true" providerid="tlwr">
+            <icon section="account">TelewearNew.Tizen.Wearable.png</icon>
+            <icon section="account-small">TelewearNew.Tizen.Wearable.png</icon>
+            <label>Telegram</label>
+            <label xml:lang="en-us">Telegram</label>
+            <capability>http://tizen.org/account/capability/contact</capability>
+            <capability>http://tizen.org/account/capability/photo</capability>
+            <capability>http://tizen.org/account/capability/message</capability>
+            <capability>http://tizen.org/account/capability/music</capability>
+            <capability>http://tizen.org/account/capability/document</capability>
+        </account-provider>
+    </account>
+    <privileges>
+        <privilege>http://tizen.org/privilege/account.read</privilege>
+        <privilege>http://tizen.org/privilege/account.write</privilege>
+        <privilege>http://tizen.org/privilege/location</privilege>
+        <privilege>http://tizen.org/privilege/location.coarse</privilege>
+        <privilege>http://tizen.org/privilege/location.enable</privilege>
+        <privilege>http://tizen.org/privilege/recorder</privilege>
+    </privileges>
+    <provides-appdefined-privileges />
+    <feature name="http://tizen.org/feature/account">true</feature>
+    <feature name="http://tizen.org/feature/account.sync">true</feature>
+    <feature name="http://tizen.org/feature/location">true</feature>
+    <feature name="http://tizen.org/feature/location.gps">true</feature>
+    <feature name="http://tizen.org/feature/maps">true</feature>
+    <feature name="http://tizen.org/feature/microphone">true</feature>
+    <feature name="http://tizen.org/feature/screen.size.normal.360.360">true</feature>
+    <feature name="http://tizen.org/feature/watch_app">true</feature>
+</manifest>
