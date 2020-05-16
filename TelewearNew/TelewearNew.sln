@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelewearNew", "TelewearNew.csproj", "{C78FFCB4-81CB-44BD-804F-DEBCC24498B5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelewearNew.Tizen.Wearable", "..\TelewearNew.Tizen.Wearable\TelewearNew.Tizen.Wearable.csproj", "{83BFD372-BC7C-4CEE-98FD-353D48862348}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telewear", "..\Telewear\Telewear.csproj", "{9125D358-4D1D-4CCF-998A-01DBFA49FB70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C78FFCB4-81CB-44BD-804F-DEBCC24498B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C78FFCB4-81CB-44BD-804F-DEBCC24498B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C78FFCB4-81CB-44BD-804F-DEBCC24498B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C78FFCB4-81CB-44BD-804F-DEBCC24498B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83BFD372-BC7C-4CEE-98FD-353D48862348}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83BFD372-BC7C-4CEE-98FD-353D48862348}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83BFD372-BC7C-4CEE-98FD-353D48862348}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83BFD372-BC7C-4CEE-98FD-353D48862348}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9125D358-4D1D-4CCF-998A-01DBFA49FB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9125D358-4D1D-4CCF-998A-01DBFA49FB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9125D358-4D1D-4CCF-998A-01DBFA49FB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9125D358-4D1D-4CCF-998A-01DBFA49FB70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
