@@ -25,6 +25,13 @@ namespace Telewear {
             set { SetValue(MessageTextProperty, value); }
         }
 
+        public static readonly BindableProperty ColorProperty =
+            BindableProperty.Create(nameof(Color), typeof(string), typeof(Message), default(string), BindingMode.OneWay);
+        public Color Color {
+            get { return (Color)GetValue(ColorProperty); }
+            set { SetValue(ColorProperty, value); }
+        }
+
         public Message() {
             InitializeComponent();
         }
@@ -37,6 +44,9 @@ namespace Telewear {
             }
             else if (propertyName == MessageTextProperty.PropertyName) {
                 message.Text = MessageText;
+            }
+            else if (propertyName == ColorProperty.PropertyName) {
+                this.BackgroundColor = Color;
             }
         }
     }

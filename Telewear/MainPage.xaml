@@ -7,6 +7,9 @@
 	<c:CirclePage.Content>
 		<StackLayout>
 			<tlwr:Message Sender="Deleted Account" MessageText="nice" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<tlwr:Message Sender="Deleted Account" MessageText="nice" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="BlueViolet"/>
+			<tlwr:Message Sender="Deleted Account" MessageText="nice" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Tomato"/>
+			<tlwr:Message Sender="Deleted Account" MessageText="nice" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Gold"/>
 		</StackLayout>
 	</c:CirclePage.Content>
 </c:CirclePage>
