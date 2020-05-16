@@ -4,7 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Telewear.Message">
-	<Label x:Name="sender" Text="Happy User" />
-	<Label x:Name="message" Text="This is a very nice message" />
+             x:Class="Telewear.Message"
+			 BackgroundColor="Gray"
+			 Padding="15">
+	<Label x:Name="sender" Text="Happy User" TextColor="White" FontSize="Micro" FontAttributes="Bold"/>
+	<Label x:Name="message" Text="This is a very nice message" TextColor="White"/>
 </StackLayout>
