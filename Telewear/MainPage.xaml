@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
-             x:Class="Telewear.MainPage">
-  <c:CirclePage.Content>
-    <StackLayout>
-      <Label Text="Welcome to Xamarin.Forms!"
-          VerticalOptions="CenterAndExpand"
-          HorizontalOptions="CenterAndExpand" />
-    </StackLayout>
-  </c:CirclePage.Content>
+		      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		      xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+		      xmlns:tlwr="clr-namespace:Telewear"
+		      x:Class="Telewear.MainPage">
+	<c:CirclePage.Content>
+		<StackLayout>
+			<tlwr:Message Sender="Deleted Account" MessageText="nice" HorizontalOptions="Center" VerticalOptions="Center"/>
+		</StackLayout>
+	</c:CirclePage.Content>
 </c:CirclePage>
