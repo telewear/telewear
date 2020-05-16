@@ -5,8 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Telewear.Message"
-			 BackgroundColor="Gray"
-			 Padding="15">
-	<Label x:Name="sender" Text="Happy User" TextColor="White" FontSize="Micro" FontAttributes="Bold"/>
-	<Label x:Name="message" Text="This is a very nice message" TextColor="White"/>
+			 BackgroundColor="Gray" Padding="15">
+	
+	<Label x:Name="sender" Text="<No Sender attribute!>" TextColor="White" FontSize="Micro" FontAttributes="Bold"/>
+	<Label x:Name="message" Text="<No MessageBody attribute!>" TextColor="White"/>
 </StackLayout>
