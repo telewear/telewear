@@ -13,6 +13,22 @@ namespace Telewear {
     public partial class MainPage : CirclePage {
         public MainPage() {
             InitializeComponent();
+            StackLayout stack = (StackLayout)Content;
+            stack.Children.Add(new Message {
+                Sender = "Telewear",
+                MessageText = "Hello!",
+                ColorScheme = Colors.Dark
+            });
+            stack.Children.Add(new Message {
+                Sender = "Telewear",
+                MessageText = "Hello!",
+                ColorScheme = Colors.Light
+            });
+            stack.Children.Add(new Message {
+                Sender = "Telewear",
+                MessageText = "Hello!",
+                ColorScheme = Colors.SMS
+            });
         }
     }
 }
