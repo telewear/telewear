@@ -25,15 +25,11 @@ namespace Telewear {
             set { SetValue(MessageTextProperty, value); }
         }
 
-        public static readonly BindableProperty ColorSchemeProperty =
-            BindableProperty.Create(nameof(Colors), typeof(string), typeof(Message), default(string), BindingMode.OneWay);
-        public Colors ColorScheme {
-            get { return (Colors)GetValue(ColorSchemeProperty); }
-            set { SetValue(ColorSchemeProperty, value); }
-        }
-
         public Message() {
             InitializeComponent();
+            BackgroundColor = Config.scheme.messageBackground;
+            sender.TextColor = Config.scheme.messageForeground;
+            message.TextColor = Config.scheme.messageForeground;
         }
 
         protected override void OnPropertyChanged(string propertyName = null) {
@@ -44,13 +40,6 @@ namespace Telewear {
             }
             else if (propertyName == MessageTextProperty.PropertyName) {
                 message.Text = MessageText;
-            }
-            else if (propertyName == ColorSchemeProperty.PropertyName) {
-                this.BackgroundColor = ColorScheme.messageBackground;
-                foreach (var c in this.Children) {
-                    Label l = (Label)c;
-                    l.TextColor = ColorScheme.messageForeground;
-                }
             }
         }
     }
