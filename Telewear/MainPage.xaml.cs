@@ -16,8 +16,21 @@ namespace Telewear {
             StackLayout stack = (StackLayout)Content;
             Config.scheme = Colors.Dark;
             stack.Children.Add(new Message {
-                Sender = "Telewear",
-                MessageText = "Hello!"
+                Sender = "John Smith",
+                MessageText = "Incoming",
+                HorizontalOptions = LayoutOptions.Start
+            });
+            Config.scheme = Colors.Light;
+            stack.Children.Add(new Message {
+                Sender = "Jane Smith",
+                MessageText = "Are you a robot?",
+                HorizontalOptions = LayoutOptions.End
+            });
+            Config.scheme = Colors.SMS;
+            stack.Children.Add(new Message {
+                Sender = "Tizen Hater",
+                MessageText = "Samsung should die",
+                HorizontalOptions = LayoutOptions.Start
             });
         }
     }
