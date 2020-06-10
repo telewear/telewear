@@ -13,7 +13,6 @@ namespace Telewear {
     public partial class MainPage : CirclePage {
         public MainPage() {
             InitializeComponent();
-            StackLayout stack = (StackLayout)Content;
             Config.scheme = Colors.Dark;
             stack.Children.Add(new Message {
                 Sender = "John Smith",
@@ -30,6 +29,17 @@ namespace Telewear {
             stack.Children.Add(new Message {
                 Sender = "Tizen Hater",
                 MessageText = "Samsung should die",
+                HorizontalOptions = LayoutOptions.Start
+            });
+            Config.scheme = Colors.Dark;
+            stack.Children.Add(new Message {
+                Sender = "Jane Smith",
+                MessageText = "Calm down Tizen Hater.",
+                HorizontalOptions = LayoutOptions.End
+            });
+            stack.Children.Add(new Message {
+                Sender = "John Smith",
+                MessageText = "The Tizen dev tools need to die, not Samsung",
                 HorizontalOptions = LayoutOptions.Start
             });
         }

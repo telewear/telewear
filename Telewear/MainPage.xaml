@@ -5,7 +5,9 @@
 		      xmlns:tlwr="clr-namespace:Telewear"
 		      x:Class="Telewear.MainPage">
 	<c:CirclePage.Content>
-		<StackLayout>
-		</StackLayout>
+		<c:CircleScrollView>
+			<StackLayout x:Name="stack">
+			</StackLayout>
+		</c:CircleScrollView>
 	</c:CirclePage.Content>
 </c:CirclePage>
