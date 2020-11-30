@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
+using TLSharp.Core;
 
 namespace Telewear {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : CirclePage {
         public MainPage() {
             InitializeComponent();
+            var client = new TelegramClient(TdConfig.api_id, TdConfig.api_hash);
+            await client.ConnectAsync();
         }
 
         // test code
