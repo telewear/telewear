@@ -14,7 +14,12 @@ namespace Telewear {
     public partial class MainPage : CirclePage {
         public MainPage() {
             InitializeComponent();
+            ConnectToTelegram();
+        }
+
+        private async void ConnectToTelegram() {
             var client = new TelegramClient(TdConfig.api_id, TdConfig.api_hash);
+            Static.tgClient = client;
             await client.ConnectAsync();
         }
 
