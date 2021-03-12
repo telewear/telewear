@@ -18,7 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Telegram" Version="1.0.1" />
     <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.2.0" />
+    <PackageReference Include="TLSharp" Version="0.1.0.574" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="pages\LoginPhoneNumPage.xaml.cs">
+      <DependentUpon>LoginPhoneNumPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

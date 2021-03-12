@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage xmlns="http://xamarin.com/schemas/2014/forms"
+		      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		      xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+		      xmlns:tlwr="clr-namespace:Telewear"
+		      x:Class="Telewear.Pages.LoginPhoneNumPage">
+	<c:CirclePage.Content>
+		<c:CircleStackLayout>
+			<Label Text="Type your phone number."/>
+			<!--<Entry x:Name="PhoneInput" x: -->
+		</c:CircleStackLayout>
+	</c:CirclePage.Content>
+</c:CirclePage>

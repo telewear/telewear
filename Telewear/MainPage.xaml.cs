@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tizen.Wearable.CircularUI.Forms;
-using TLSharp.Core;
+using Telewear.Pages;
+using TgSharp.Core;
 
 namespace Telewear {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -21,6 +22,7 @@ namespace Telewear {
             var client = new TelegramClient(TdConfig.api_id, TdConfig.api_hash);
             Static.tgClient = client;
             await client.ConnectAsync();
+            if (!client.IsUserAuthorized()) await Navigation.PushModalAsync(new LoginPhoneNumPage());
         }
 
         // test code
