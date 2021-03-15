@@ -22,7 +22,7 @@ namespace Telewear {
             var client = new TelegramClient(TdConfig.api_id, TdConfig.api_hash);
             Static.tgClient = client;
             await client.ConnectAsync();
-            if (!client.IsUserAuthorized()) await Navigation.PushModalAsync(new LoginPhoneNumPage());
+            if (!client.IsUserAuthorized()) await Navigation.PushModalAsync(new LoginViaQRPage());
         }
 
         // test code

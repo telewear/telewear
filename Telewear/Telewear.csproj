@@ -13,14 +13,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="lib\" />
     <Folder Include="res\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="QRCoder" Version="1.4.1" />
     <PackageReference Include="Telegram" Version="1.0.1" />
+    <PackageReference Include="TgSharp" Version="0.3.1--date20201017-2313.git-99aa273" />
     <PackageReference Include="Tizen.Wearable.CircularUI" Version="1.2.0" />
-    <PackageReference Include="TLSharp" Version="0.1.0.574" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +31,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="pages\LoginViaQRPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MainPage.xaml">

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c:CirclePage
+	xmlns:c="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Telewear.LoginViaQRPage">
+    <ContentPage.Content>
+        <StackLayout>
+			<Label Text="To log in on your watch:" VerticalTextAlignment="Center"/>
+			<Label VerticalTextAlignment="Center">
+				<Label.FormattedText>
+					<FormattedString>
+						<Span Text="1. Open "/>
+						<Span Text="Telegram" FontAttributes="Bold" />
+						<Span Text=" on your mobile device."/>
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
+			<Label VerticalTextAlignment="Center">
+				<Label.FormattedText>
+					<FormattedString>
+						<Span Text="2. Go to "/>
+						<Span Text="Settings > Devices > Scan QR Code" FontAttributes="Bold" />
+						<Span Text="."/>
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
+			<Label Text="3. Scan this QR code:" VerticalTextAlignment="Center"/>
+			<Image x:Name="QrImage"/>
+		</StackLayout>
+    </ContentPage.Content>
+</c:CirclePage>
