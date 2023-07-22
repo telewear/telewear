@@ -1,3 +1,7 @@
+Telewear is archived because of a lack of proper tools and interest, but it might come back. Stay tuned for updates!
+
+---
+
 # Telewear
 A Telegram client for Samsung watches, written in C# and Xamarin.
 
